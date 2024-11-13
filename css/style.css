@@ -1,0 +1,529 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFB26F;
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+}
+
+header {
+    
+    background-color: #ffb26f;
+    
+    
+}
+#logo-empresa a {
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+
+}
+#logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+h1:hover {
+    
+    color:  #9c7f5f;
+    transform:translateY(-5px);
+    
+}
+    
+.centrado{
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+ .menu-section{
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+ }
+
+
+#nav-encabezado ul {
+    display: flex;
+    list-style: none; 
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    margin: 0 auto 0.5rem;
+    background: #FFCF9D;
+    box-sizing: border-box;
+}
+
+
+#nav-encabezado ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+
+#nav-encabezado ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    display: block;
+}
+
+#nav-encabezado ul li a.activa {
+    background-color: #9c7f5f;
+    color:#da9c76 ;
+    font-weight: 800px ;
+}
+
+#nav-encabezado ul li a:hover:not(.activa){
+    background-color:  #FFB26F;  
+}
+
+#nav-encabezado ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+#nav-encabezado li {
+    
+    text-align: center;
+}
+
+/* Estilos para el submenú */
+#nav-encabezado ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFCF9D;
+    list-style: none;
+    min-width: 200px;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-encabezado ul li .submenu li {
+    background-color:  #FFB26F;
+    margin: 0;
+}
+
+#nav-encabezado ul li .submenu li a {
+    padding: 10px;
+    font-size: 0.7em;
+    display: block;
+}
+
+/* Mostrar el submenú al hacer hover sobre el elemento padre */
+#nav-encabezado ul li:hover > .submenu {
+    display: block;
+}
+
+
+/* Estilos adicionales opcionales */
+#nav-encabezado ul li .submenu li a:hover {
+    background-color:  #FFCF9D;
+    font-size: 1rem;
+    font-weight: 400;
+}
+@media (max-width: 768px) {
+    #nav-encabezado ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #nav-encabezado ul li {
+        margin: 5px 0;
+    }
+}
+
+
+/*Estilos para el main section article y p*/
+
+/* Estilos generales */
+main.centrado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* Estilos para las tarjetas */
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9de;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.tarjetas:hover {
+    transform: translateY(-15px);/* Efecto:al pasar el mouse por la tarjeta esta se mueve hacia arriba*/
+}
+
+/* Estilo de las imágenes */
+.tarjetas figure {
+    width: 100%;
+    margin: 0;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 300px; /* Ajusta la altura máxima de las imágenes */
+}
+
+/* Contenido de las tarjetas */
+.contenido-tarjetas, .tarjetas > div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contenido-tarjetas h2, .tarjetas h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #19301d;
+}
+
+.contenido-tarjetas p, .tarjetas p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #573201;
+    font-weight: 500;
+}
+details summary {
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+}
+
+details[open] summary {
+    color: #0056b3;
+}
+input[type="button"]{
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+input[type="button"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .contenido_principal {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Estilo para la imagen del aside */
+.banners-contenedor {
+    display: flex; /* Dispone los elementos en una fila */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    gap: 1rem; /* Espacio entre cada banner */
+    margin: 1rem 0; /* Margen superior e inferior */
+}
+
+.banner {
+    width: 100%; /* Hace que los banners se adapten al tamaño del contenedor */
+    flex: 1; /* Permite que cada banner ocupe un espacio igual */
+    max-height: 250px; /* Ajusta la altura máxima del banner */
+    object-fit: cover; /* Escala la imagen y la recorta si es necesario */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+}
+
+
+
+/* Estilos para el pie de página */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #DE8F5F;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#datos, #sec-foot, #nav-foot {
+    flex: 1; /* Hace que cada sección ocupe espacio igual */
+    min-width: 250px; /* Evita que las columnas se vuelvan demasiado estrechas */
+}
+
+#datos {
+    font-weight: 600;
+}
+
+#sec-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#sec-foot h3 {
+    margin-bottom: 10px;
+}
+
+#anchor-foot {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#nav-foot {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-foot {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-foot > li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#menu-foot > li > a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+    transition: background 0.3s; /* Añade una transición suave al fondo */
+    
+}
+
+#menu-foot > li > a:hover {
+    background-color: #c97d50;
+    color: #fff;
+}
+
+#submenu-foot {
+    display: none;
+    position: absolute;
+    top: -100%;/*para que el submenú se desplace hacia arriba */
+    left: 0;
+    background-color: #DE8F5F;
+    padding: 10px;
+    list-style: none;
+}
+
+#menu-foot > li:hover > #submenu-foot {
+    display: block;
+}
+
+#submenu-foot > li > a {
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+#submenu-foot > li > a:hover {
+    background-color: #c97d50;
+    color: #fff;
+}
+
+
+
+
+
+/*Estilos pagina de productos*/
+
+.centrados {
+    margin: 0 auto;
+    padding: 0 .8em;
+}
+
+
+.titulo1{   
+    margin: 0 0 1em;
+    padding: 1em 0;
+    font-weight: 100;
+    color: #333333;
+    text-align: center;
+   
+}
+
+.menu-section{
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid hsl(0, 0%);
+ }
+ .tarjeta:hover {
+    transform: translateY(-15px);/* Efecto:al pasar el mouse por la tarjeta esta se mueve hacia arriba*/
+}
+ .tarjeta a {
+    color: rgb(36, 5, 5);
+    text-decoration: none;
+}
+
+.tarjeta a:hover{
+    box-shadow: 3px 3px 8px #817272;
+}
+
+.tarjeta-content{
+    padding: 1.4em;
+}
+
+.tarjeta-content h2{
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+
+.tarjeta-content p{
+    font-size: 95%;  /*.95em*/
+}
+
+figure {
+    margin: 0;
+}
+
+img{
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+/*flex*/
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    background: hsl(44, 74%, 74%);
+    margin-bottom: 2em;
+    width: 33%;
+}
+
+/*estilos para pagina servicios*/
+
+
+main {
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2em; /* Espacio inferior para evitar solapamiento con el footer */
+}
+
+.principal {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.selec-imagen {
+    justify-self: center;
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+#turnos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    gap: 0px;
+    padding: 5px;
+}
+
+.service {
+    background: #FFCF9D;
+    margin-bottom: 2em;
+    width: 90%;
+}
+
+.service p {
+    color: #3D0301;
+    font-weight: 400;
+}
+
+/* Breakpoints */
+
+/* Pantallas grandes (laptops y desktops) */
+@media (max-width: 1200px) {
+    #turnos {
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+}
+
+/* Pantallas medianas (tablets y pantallas pequeñas de laptop) */
+@media (max-width: 768px) {
+    #turnos {
+        grid-template-columns: auto auto;
+        gap: 15px;
+    }
+    
+    .service {
+        width: 100%;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    #turnos {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .principal, .selec-imagen {
+        text-align: center;
+        padding: 10px;
+    }
+
+    main {
+        margin-bottom: 4em; /* Aumentar el margen inferior en pantallas pequeñas */
+    }
+
+    footer {
+        position: relative; /* Asegura que el footer no se superponga */
+        padding: 1em 0; /* Añade padding para espacio adicional */
+    }
+}
+

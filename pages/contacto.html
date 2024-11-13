@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/turnos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>   
+        <figure id="logo-empresa">   
+            <a href="index.html"><img id="logo" src="/img/logoPetShop.png" alt="logo PetShop"></a>
+        </figure>
+        <h1>PetShopp online</h1>
+    </header>
+    <div class="centrado">
+        <section class="menu-section">
+            <nav id="nav-encabezado">
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicios.html">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="/pages/turnos.html">Turnos Veterinaria</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Peluqueria</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Corte de Uñas</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Baño</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="activa" href="#">Contacto</a></li>
+                </ul>        
+            </nav> 
+        </section>
+    </div>
+    
+    <main>
+        <h1>Contacto</h1>
+        
+        <form action="https://formspree.io/f/xwpegpbg" method="post">
+            
+            <h2>Datos de Contacto</h2>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" name="" id="" size="10" maxlength="15"  required>
+                    <label for="apellido">Apellido *</label>
+                    <input type="text" name="" id="" size="10" maxlength="15"  required><br><br>
+                    <label for="telefono">Telefono</label>
+                    <input type="number" name="telefono" id=""required>
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" id="" required><br>
+            </fieldset><br><br>
+
+            <input type="submit" value="Enviar Turno">
+            <input type="reset" value="Borrar">
+            <button type="button" onclick="window.location.href='../index.html'">Volver a Inicio</button>
+    
+
+        </form>
+
+    </main>
+    
+    <footer>
+        <div id="datos">
+            <p>Av de los Loros 1234</p><br>
+            <p>Telef: 1133445566</p><br>
+            <p>petshoppworld_ra@gmail.com</p>
+        </div>
+        <section id="sec-foot">
+            <h3>Encuentranos en</h3><br>
+            <div id="anchor-foot">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: red;"></i></a>    
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin" style="color: rgb(9, 129, 199);"></i></a>    
+                <a href="https://www.github.com"><i class="fa-brands fa-github" style="color: black;"></i></a> 
+            </div>
+              
+        </section>    
+        <nav id="nav-foot">
+           <ul id="menu-foot">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/servicios.html">Servicios</a>
+                    <ul id="submenu-foot">
+                        <li><a href="/pages/turnos.html">Turnos Veterinaria</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Peluqueria</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Corte de Uñas</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Baño</a></li>
+                    </ul> 
+                </li> 
+                
+            </ul>
+        </nav>
+        <script src="https://kit.fontawesome.com/36fe82f196.js" crossorigin="anonymous"></script>           
+    </footer>
+</body>
+</html>

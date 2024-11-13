@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/turnos.css">
+    <title>Formulario de Inscripcion</title>
+</head>
+<body>
+    <header>   
+        <figure id="logo-empresa">   
+            <a href="index.html"><img id="logo" src="/img/logoPetShop.png" alt="logo PetShop"></a>
+        </figure>
+        <h1>PetShopp Central de Turnos</h1>
+    </header>
+    <div class="centrado">
+        <section class="menu-section">
+            <nav id="nav-encabezado">
+                <ul>
+                    <li><a  href="/index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a class="activa" href="pages/servicios.html">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="/pages/turnos.html">Turnos Veterinaria</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Peluqueria</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Corte de Uñas</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Baño</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>        
+            </nav> 
+        </section>
+    </div>
+    <main>
+        <h1>Formulario de Inscripcion</h1>
+        <h2>Mascota</h2><br>
+        <form action="https://formspree.io/f/xwpegpbg" method="post">
+           
+            
+            <fieldset>
+                <legend>Datos de la Mascota</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="" size="10" maxlength="15" required>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id=""required size="10" maxlength="15"><br><br>
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" id="" size="2" required>
+                <label for="fec_nac">Fecha de Nacimiento</label>
+                <input type="date" name="fec_nac" id=""><br><br>
+                <label for="tipo-mascota">Tipo de Mascota:</label>
+                <select id="tipo-mascota" name="tipo-mascota" required>
+                    <option value="">Seleccionar</option>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="otros">Otro</option>
+                </select>
+                <label for="raza">Raza</label>
+                <input type="text" name="raza" id="" size="10" maxlength="15" required><br><br>
+                <label for="talla">Talla</label>
+                <select name="talla" id="">
+                    <option value="1">Mini</option>
+                    <option value="2">Chica</option>
+                    <option value="3">Mediana</option>
+                    <option value="4">Grande</option>
+                    <option value="5">Extra Grande</option>
+                </select><br><br>
+                <label for="peso">Peso</label>
+                <input type="number" name="peso" id=""><br><br>
+                <label for="comentarios">Informacion Adicional</label><br>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Informenos de algo que usted considere que tenemos que tener en cuenta"></textarea><br>
+            </fieldset><br><br>
+            
+            <h2>Propietario</h2>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" name="" id="" size="10" maxlength="15"  required>
+                    <label for="apellido">Apellido *</label>
+                    <input type="text" name="" id="" size="10" maxlength="15"  required><br><br>
+                    <label for="dni">DNI</label>
+                    <input type="number" name="dni" id=""required>
+                    <label for="telefono">Telefono</label>
+                    <input type="number" name="telefono" id=""required>
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" id="" required><br>
+            </fieldset><br><br>
+
+            <input type="submit" value="Enviar Turno">
+            <input type="reset" value="Borrar">
+            <button type="button" onclick="window.location.href='servicios.html'">Volver a Servicios</button>
+    
+
+        </form>
+       
+
+    </main>
+
+    <footer>
+        <div id="datos">
+            <p>Av de los Loros 1234</p><br>
+            <p>Telef: 1133445566</p>
+            <p>petshoppworld_ra@gmail.com</p>
+        </div>
+        <section id="sec-foot">
+            <h3>Encuentranos en</h3><br>
+            <div id="anchor-foot">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: red;"></i></a>    
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin" style="color: rgb(70, 167, 223);"></i></a>    
+                <a href="https://www.github.com"><i class="fa-brands fa-github"></i></a> 
+            </div>
+              
+        </section>    
+        <nav id="nav-foot">
+           <ul id="menu-foot">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/servicios.html">Servicios</a>
+                    <ul id="submenu-foot">
+                        <li><a href="/pages/turnos.html">Turnos Veterinaria</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Peluqueria</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Corte de Uñas</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Baño</a></li>
+                    </ul> 
+                </li> 
+                
+            </ul>
+        </nav>
+        <script src="https://kit.fontawesome.com/36fe82f196.js" crossorigin="anonymous"></script>           
+    </footer>
+    
+</body>
+</html>

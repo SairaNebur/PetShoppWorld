@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/turnos.css">
+    <title>Turnos</title>
+</head>
+<body>
+    <header>   
+        <figure id="logo-empresa">   
+            <a href="index.html"><img id="logo" src="/img/logoPetShop.png" alt="logo PetShop"></a>
+        </figure>
+        <h1>PetShopp Central de Turnos</h1>
+    </header>
+    <div class="centrado">
+        <section class="menu-section">
+            <nav id="nav-encabezado">
+                <ul>
+                    <li><a  href="/index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a class="activa" href="servicios.html">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="/pages/turnos.html">Turnos Veterinaria</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Peluqueria</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Corte de Uñas</a></li>
+                            <li><a href="/pages/turnos.html">Turnos Baño</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>        
+            </nav> 
+        </section>
+    </div>
+    <main>
+        
+        <h4>Sino esta inscripto por favor complete este formulario <a href="form.html">Formulario</a></h4><br><br>
+
+        <form action="https://formspree.io/f/xwpegpbg" method="post">
+            <fieldset>
+                <legend><strong>Servicios Turno</strong></legend><br>
+                <label for="tipo"><b>Seleccione su Mascota</b></label><br><br>
+                    <input type="radio" name="tipo" id="" value="1">Perro
+                    <input type="radio" name="tipo" id="" value="2">Gato
+                    <input type="radio" name="tipo" id="" value="4">Otro
+                    <br><br>
+                <label for="especifico">Especifique el "Otro"</label><br>
+                <input type="text" name="" id="" size="10" maxlength="15"><br><br>
+
+                <label for="comentario">Describa sinteticamente los sintomas</label><br>
+                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escriba aqui un maximo de 300 caracteres" required></textarea><br><br>
+
+                <label for="servicio">Servicio a Reservar:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccionar Servicio</option>
+                        <option value="veterinaria">Veterinaria</option>
+                        <option value="bano">Baño</option>
+                        <option value="corte-pelo">Corte de Pelo</option>
+                        <option value="corte-unas">Corte de Uñas</option>
+                        <option value="limpieza-dental">Limpieza Dental</option>
+                    </select>
+
+                <label for="dia">Fecha Seleccionada</label>
+                <input type="date" name="dia" id="">
+
+                <label for="turno">Seleccione su horario</label>
+                <select name="turno" id="">
+                    <option value="1">Mañana (10 a 12 )</option>
+                    <option value="2">Tarde (14 a 16 )</option>
+                    <option value="3">Vespertino (17 a 19 )</option>
+                </select>    
+            </fieldset>
+            <h4>Nota :</h4>
+            <p>La atencion es por orden de llegada dentro del horario elegido</p><br><br>
+            <input type="submit" value="Enviar Turno">
+            <input type="reset" value="Borrar">
+            <button type="button" onclick="window.location.href='servicios.html'">Volver a Servicios</button>
+
+
+
+        </form>
+    </main>
+    <footer>
+        <div id="datos">
+            <p>Av de los Loros 1234</p><br>
+            <p>Telef: 1133445566</p><br>
+            <p>petshoppworld_ra@gmail.com</p>
+        </div>
+        <section id="sec-foot">
+            <h3>Encuentranos en</h3><br>
+            <div id="anchor-foot">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: red;"></i></a>    
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin" style="color: rgb(70, 167, 223);"></i></a>    
+                <a href="https://www.github.com"><i class="fa-brands fa-github"></i></a> 
+            </div>
+              
+        </section>    
+        <nav id="nav-foot">
+           <ul id="menu-foot">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/servicios.html">Servicios</a>
+                    <ul id="submenu-foot">
+                        <li><a href="/pages/turnos.html">Turnos Veterinaria</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Peluqueria</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Corte de Uñas</a></li>
+                        <li><a href="/pages/turnos.html">Turnos Baño</a></li>
+                    </ul> 
+                </li> 
+                
+            </ul>
+        </nav>
+        <script src="https://kit.fontawesome.com/36fe82f196.js" crossorigin="anonymous"></script>           
+    </footer>
+</body>
+</html>
