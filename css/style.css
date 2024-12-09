@@ -58,7 +58,16 @@ h1:hover {
     padding-bottom: 2em;
     margin-bottom: 2em;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
+   
  }
+.bg-dark .navbar {
+    background-color: rgb(195 131 39) !important;
+ }
+
+.dropdown-menu >li >a .dropdown-item{
+    background-color: #DE8F5F;
+    color: #9c7f5f;
+}
 
 
 #nav-encabezado ul {
