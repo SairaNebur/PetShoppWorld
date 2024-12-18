@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-body {
+body .pagCompras {
     background-color: #FFB26F;
     font-family: "Montserrat", sans-serif;
     color: #333333;
@@ -229,7 +229,7 @@ details summary {
 details[open] summary {
     color: #0056b3;
 }
-input[type="button"]{
+input[type="button"] {
     background-color: #5cb85c;
     color: #fff;
     border: none;
@@ -240,6 +240,7 @@ input[type="button"]{
     margin-right: 10px;
     transition: background-color 0.3s;
 }
+
 input[type="button"]:hover {
     background-color: #4cae4c;
 }
@@ -534,5 +535,183 @@ main {
         position: relative; /* Asegura que el footer no se superponga */
         padding: 1em 0; /* Añade padding para espacio adicional */
     }
+}
+
+/*pagina de compras - carrito */
+/* Contenedor general de productos */
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribuye los productos en columnas */
+    gap: 20px; /* Espacio entre productos */
+    padding: 20px;
+}
+
+/* Imágenes de los productos */
+.producto img {
+    width: 100%; /* Asegura que la imagen tome el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    max-height: 150px; /* Limita la altura máxima para evitar imágenes demasiado grandes */
+    object-fit: cover; /* Recorta la imagen si no se ajusta exactamente */
+    border-radius: 8px; /* Bordes redondeados como el producto */
+    margin-bottom: 10px; /* Espaciado debajo de la imagen */
+}
+
+
+/* Estilo individual de los productos */
+.producto {
+    background-color: #FFB26F; /* Fondo cálido */
+    border: 1px solid #c97d50; /* Borde cálido */
+    padding: 15px;
+    max-width: 250px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos */
+    justify-content: flex-start;
+    text-align: center; /* Centrar texto */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animaciones suaves */
+}
+
+.producto:hover {
+    transform: scale(1.03); /* Aumenta ligeramente al pasar el cursor */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+}
+
+/* Texto dentro de los productos */
+.producto span {
+    font-size: 16px; /* Tamaño del texto */
+    margin: 10px 0; /* Espaciado entre líneas */
+    color: #5a3d2b; /* Color de texto */
+    font-weight: bold;
+}
+
+/* Botones generales */
+button {
+    background-color: #c97d50; /* Naranja cálido */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+/* Efecto hover para botones */
+button:hover {
+    background-color: #a86036; /* Naranja más oscuro */
+}
+
+/* Botón específico para vaciar carrito */
+.btn-vaciar {
+    background-color: #FF6F61; /* Rojo suave */
+}
+
+.btn-vaciar:hover {
+    background-color: #e7211a; /* Rojo intenso */
+}
+
+/* Botón específico para checkout */
+.btn-ckout {
+    background-color: #FFB26F; /* Igual al color de fondo principal */
+}
+
+.btn-ckout:hover {
+    background-color: #c97d50; /* Naranja cálido */
+}
+
+/* Carrito */
+#carrito {
+    margin-top: 20px;
+    background-color: #c97d50;
+    border: 5px solid #FFB26F;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 600px) {
+    #productos {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+}
+
+
+/*.producto {
+    background-color: #FFB26F;
+    border: 1px solid  #c97d50;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#carrito {
+    margin-top: 20px;
+    background-color:  #c97d50;
+    border: 5px solid  #FFB26F;
+    padding: 15px;
+}
+button {
+    background-color:  #c97d50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.btn-vaciar {
+    background-color:  #FFB26F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+.btn-vaciar:hover {
+    background-color: #e7211a;
+}
+.btn-ckout {
+    background-color:  #FFB26F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+.btn-ckout:hover {
+    background-color: #45a049;
+}*/
+.agotado {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.descuento {
+    color: green;
+    font-weight: bold;
+}
+#checkout-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.checkout-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
 }
 
